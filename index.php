@@ -241,6 +241,4 @@ $baseImagePath = get_template_directory_uri() . '/assets/img/';
   document.addEventListener('DOMContentLoaded', function() {});
 </script>
 
-<div></div>
-
 <?php get_footer(); ?>
