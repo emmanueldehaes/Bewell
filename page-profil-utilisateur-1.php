@@ -230,14 +230,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <?php
 $image_id_1 = 45;
+$image_url_1 = wp_get_attachment_url($image_id_1);
 $image_id_2 = 44;
+$image_url_2 = wp_get_attachment_url($image_id_2);
 $image_id_3 = 43;
+$image_url_3 = wp_get_attachment_url($image_id_3);
 ?>
 
 <div id="programmeGroupe" class="content_section">
   <div class="flex-container">
   <div class="card m-2" style="width: 18rem;">
-      <img src="<?php echo $image_id_1; ?>" class="card-img-top" alt="picture card">
+      <img src="<?php echo $image_url_1; ?>" class="card-img-top" alt="picture card">
       <div class="card-body">
         <h5 class="card-title">Séance d'étirements dynamiques (10 min) : </h5>
         <p class="card-text">Avant une réunion importante, organisez une courte séance d'étirements dynamiques pour relâcher les tensions et augmenter la concentration.</p>
@@ -245,7 +248,7 @@ $image_id_3 = 43;
       </div>
     </div>
 <div class="card m-2" style="width: 18rem;">
-<img src="<?php echo $image_id_2; ?>" class="card-img-top" alt="picture card">
+<img src="<?php echo $image_url_2; ?>" class="card-img-top" alt="picture card">
   <div class="card-body">
     <h5 class="card-title">Marche rapide groupé (15 min) :</h5>
     <p class="card-text"> Maintenez un rythme modéré qui stimule la circulation sanguine, encourage la conversation avec vos collègues et ajoute une dimension dynamique à votre routine.</p>
@@ -253,7 +256,7 @@ $image_id_3 = 43;
       </div>
     </div>
 <div class="card m-2" style="width: 18rem;">
-<img src="<?php echo $image_id_3; ?>" class="card-img-top" alt="picture card">
+<img src="<?php echo $image_url_3; ?>" class="card-img-top" alt="picture card">
   <div class="card-body">
     <h5 class="card-title">Renforcement musculaire léger (15 min) :</h5>
     <p class="card-text">Utilisez des poids légers ou de bandes élastiques pour travailler les bras, les jambes et le tronc tout en discutant avec vos collègues.</p>
@@ -264,15 +267,18 @@ $image_id_3 = 43;
     </div>
 
     <?php
-$image_id_4 = 42;
-$image_id_5 = 40;
-$image_id_6 = 41;
+$image_id_4 = 40;
+$image_url_4 = wp_get_attachment_url($image_id_4);
+$image_id_5 = 41;
+$image_url_5 = wp_get_attachment_url($image_id_5);
+$image_id_6 = 42;
+$image_url_6 = wp_get_attachment_url($image_id_6);
 ?>
 
     <div id="programmePersonnel" class="content_section" style="display: none;">
     <div class="flex-container">
     <div class="card m-2" style="width: 18rem;">
-  <img src="<?php echo $image_id_4; ?>" class="card-img-top" alt="picture card">
+  <img src="<?php echo $image_url_4; ?>" class="card-img-top" alt="picture card">
   <div class="card-body">
     <h5 class="card-title">Exercice de récupération (15 min) :</h5>
     <p class="card-text">Marche lente ou jogging très léger, suivi d'étirements supplémentaires et de respirations profondes pour une bonne récupération et relaxation.</p>
@@ -280,7 +286,7 @@ $image_id_6 = 41;
   </div>
 </div>
 <div class="card m-2" style="width: 18rem;">
-  <img src="<?php echo $image_id_5; ?>" class="card-img-top" alt="picture card">
+  <img src="<?php echo $image_url_5; ?>" class="card-img-top" alt="picture card">
   <div class="card-body">
     <h5 class="card-title">Renforcement du tronc (15 min) : </h5>
     <p class="card-text">Fournissez une routine rapide d'exercices de renforcement du tronc, y compris des places latérales, des crunchs et des twists assis.</p>
@@ -288,7 +294,7 @@ $image_id_6 = 41;
   </div>
 </div>
 <div class="card m-2" style="width: 18rem;">
-  <img src="<?php echo $image_id_6; ?>" class="card-img-top" alt="picture card">
+  <img src="<?php echo $image_url_6; ?>" class="card-img-top" alt="picture card">
   <div class="card-body">
     <h5 class="card-title">Entraînement basé sur le poids du corps (15 min) :</h5>
     <p class="card-text">Faites des exercices basés sur le poids du corps tels que des pompes, des squats et des burpees pour une entraînement rapide et efficace.</p>
