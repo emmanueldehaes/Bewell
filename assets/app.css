@@ -672,7 +672,7 @@ nav {
 
 .class__image .class__img-2 {
   position: absolute;
-  left: 300px;
+  left: 150px;
   top: 190px;
   bottom: 0;
   max-width: 300px;
@@ -1214,7 +1214,6 @@ form {
   align-items: center;
   gap: 10px;
   margin-top: 30px;
-  margin-left: 40px;
 }
 
 .infoBox-contact .icon-contact {
@@ -2348,7 +2347,7 @@ textarea {
   bottom: 0;
   right: 0;
   height: 0.2rem;
-  width: 88%;
+  width: 100%;
   background: var(--couleur-jaune);
 }
 
@@ -2698,6 +2697,12 @@ li.phone_profil{
   display: flex;
 }
 
+.input-infos {
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+}
+
 
 /* RESPONSIVE */
 
@@ -2789,7 +2794,7 @@ li.phone_profil{
 
 #timer {
   font-size: 1.4em;
-  color: #333;
+  color: var(--couleur-blanc);
   margin-bottom: 20px;
 }
 
@@ -2802,7 +2807,7 @@ li.phone_profil{
 
 .ri-close-line{
   font-size: 1.4rem;
-  color: var(--couleur-noir);
+  color: var(--couleur-blanc);
   outline: none;
 }
 
@@ -2810,8 +2815,7 @@ li.phone_profil{
   color: var(--couleur-blanc);
 }
 
-#exercice-1{
-  font-size: 1.4rem;
-  padding-top: 5px;
+.bg-svg {
+  background-color: var(--couleur-brun-fonce);
+  padding: 3rem;
 }
-

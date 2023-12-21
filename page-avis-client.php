@@ -1,41 +1,32 @@
 <?php
-
 include 'menu-profils.php';
 
-// Connexion à la base de données
+// Supprimez la partie de la connexion à la base de données externe
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $servername = "localhost";
-    $username = "Bewell";
-    $password = "MqeokrKpF3oe";
-    $dbname = "bewell";
+    // Échappez les données postées pour éviter les attaques par injection SQL
+    $nom = sanitize_text_field($_POST["nom"]);
+    $prenom = sanitize_text_field($_POST["prenom"]);
+    $avis = sanitize_text_field($_POST["avis"]);
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Utilisez la fonction wp_insert_comment pour insérer le commentaire dans WordPress
+    $commentdata = array(
+        'comment_author' => $nom . ' ' . $prenom,
+        'comment_content' => $avis,
+        'comment_type' => 'comment',  // Spécifiez le type de commentaire si nécessaire
+        'comment_post_ID' => get_page_by_title('Avis client')->ID,  // Remplacez par le titre de la page 'Avis'
+    );
 
-    // Vérifier la connexion
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    $comment_id = wp_insert_comment($commentdata);
 
-    // Échapper les données postées pour éviter les attaques par injection SQL
-    $nom = $conn->real_escape_string(htmlspecialchars($_POST["nom"]));
-    $prenom = $conn->real_escape_string(htmlspecialchars($_POST["prenom"]));
-    $metier = $conn->real_escape_string(htmlspecialchars($_POST["metier"]));
-    $avis = $conn->real_escape_string(htmlspecialchars($_POST["avis"]));
-
-    // Préparer et exécuter la requête SQL pour insérer les données dans la base de données
-    $sql = "INSERT INTO users_avis (nom, prenom, metier, avis) VALUES ('$nom', '$prenom', '$metier', '$avis')";
-
-    // Rediriger l'utilisateur vers une page de confirmation après l'envoi des données
-    if ($conn->query($sql) === TRUE) {
-        $profil_url = home_url('/profil-utilisateur') . "-" . $utilisateur['id'];
+    if ($comment_id) {
+        // Redirection vers la page de confirmation ou autre
+        $profil_url = home_url('/profil-utilisateur');
         header("Location: $profil_url");
         exit();
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Erreur lors de l'envoi de l'avis.";
     }
-
-    // Fermer la connexion à la base de données
-    $conn->close();
 }
 ?>
 
@@ -47,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <input type="text" id="nom" name="nom" placeholder="Entrer votre nom" required>
             <input type="text" id="prenom" name="prenom" placeholder="Entrer votre prénom" required>
         </div>
-        <input type="text" id="metier" name="metier" placeholder="Entrer votre métier" required>
         <textarea id="avis" name="avis" placeholder="Écrivez votre avis" required></textarea>
 
         <button class="btn-avis" type="submit">Envoyer</button>

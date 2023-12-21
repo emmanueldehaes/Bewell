@@ -1,16 +1,4 @@
-<!-- Si déjà connecté -->
-
-<?php
-/* Template Name: login-new */ 
-if (is_user_logged_in()) {
-  // si je suis déjà connecté je suis redirigé vers la page
-  wp_redirect( home_url('/profil-utilisateur') );
-	exit;
-}
-
-get_header();
-// attention c'est important de faire les redirection avant le header sinon la redirection ne marche pas
-?>
+<?php get_header(); ?>
 
 <!-- Page de connexion -->
 
@@ -59,7 +47,7 @@ get_header();
 <script>
     //Fait en sorte de cacher et montrer le mot de passe
     function togglePassword() {
-    var passwordField = document.getElementById("mdp");
+    var passwordField = document.getElementById("pwd");
     var eyeSlashIcon = document.querySelector(".showHidePw");
 
     if (passwordField.type === "password") {

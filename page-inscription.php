@@ -1,4 +1,4 @@
-<?php get_header(); ?> 
+<?php get_header(); ?>
 
 <!-- Page inscription -->
 
@@ -8,7 +8,7 @@
       <div class="form-inscription login">
         <span class="title-inscription">Inscription</span>
         <form
-          action="https://formspree.io/f/xpzvawwo"
+          action="<?php echo esc_url(home_url('/inscription')); ?>"
           method="POST"
           id="inscriptionForm"
         >
@@ -86,3 +86,40 @@
     </div>
   </div>
 </div>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['nomPrenom'])) {
+    $nomPrenom = sanitize_text_field($_POST['nomPrenom']);
+    $nomEntreprise = sanitize_text_field($_POST['nomEntreprise']);
+    $emailPro = sanitize_email($_POST['emailPro']);
+    $typeAbonnement = sanitize_text_field($_POST['typeAbonnement']);
+
+    // Créez un tableau associatif avec les données du formulaire
+    $commentdata = array(
+        'comment_author' => $nomPrenom,
+        'comment_author_email' => $emailPro,
+        'comment_content' => "Nom de l'entreprise: $nomEntreprise\nType d'abonnement: $typeAbonnement",
+        'comment_type' => 'inscription', // Un type de commentaire spécifique pour le distinguer
+        'comment_approved' => 1, // Approuvez automatiquement le commentaire
+    );
+
+    // Insérez le commentaire dans la base de données WordPress
+    $comment_id = wp_insert_comment($commentdata);
+
+    if ($comment_id) {
+        // Redirection vers une page de confirmation ou autre
+        wp_redirect(home_url('/inscription'));
+        exit();
+    } else {
+        echo "Erreur lors de l'envoi du formulaire.";
+    }
+}
+?>
+
+<script>
+    function showConfirmation() {
+        alert('Formulaire envoyé avec succès !');
+    }
+</script>
+
+<?php get_footer(); ?>

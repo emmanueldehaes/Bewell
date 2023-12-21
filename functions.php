@@ -22,6 +22,7 @@ function scripts_loader()
 
 add_action('wp_enqueue_scripts', 'scripts_loader');
 
+
 /* Gestion menus */
 register_nav_menu('header', 'En tête du menu');
 function bewell_menu_class($classes)

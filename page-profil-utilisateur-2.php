@@ -1,7 +1,3 @@
-<!-- Bloque l'accés si tu n'es pas connecté -->
-
-
-
 <!-- Menu pour profil -->
 
 <?php include 'menu-profils.php'; ?>
@@ -160,11 +156,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <ul>
             <li class="phone_profil">
                 <h1 class="label_profil">Date de naissance:</h1>
-                <span class="info_profil">6 janvier 1980</span>
+                <span class="info_profil">30 mars 1980</span>
             </li>
             <li class="address_profil">
                 <h1 class="label_profil">Sexe:</h1>
-                <span class="info_profil">Masculin</span>
+                <span class="info_profil">Féminin</span>
             </li>
             <li class="email_profil">
                 <h1 class="label_profil">Entreprise:</h1>
@@ -195,11 +191,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <li class="phone_profil">
                     <h1 class="label_profil">Nouveau poids:</h1>
-                    <input type="text" name="nouveau_poids" placeholder="Nouveau poids (kg)" />
+                    <input type="text" name="nouveau_poids" class="input-infos" placeholder="Nouveau poids (kg)" />
                 </li>
                 <li class="address_profil">
                     <h1 class="label_profil">Nouvelle taille:</h1>
-                    <input type="text" name="nouvelle_taille" placeholder="Nouvelle taille (m)" />
+                    <input type="text" name="nouvelle_taille" class="input-infos" placeholder="Nouvelle taille (m)" />
                 </li>
             </ul>
             <input type="submit" value="Enregistrer les modifications" class="btn-defi" />
@@ -234,18 +230,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <?php
-$image_id_1 = 53;
-$image_url_1 = wp_get_attachment_url($image_id_1);
-$image_id_2 = 52;
-$image_url_2 = wp_get_attachment_url($image_id_2);
-$image_id_3 = 51;
-$image_url_3 = wp_get_attachment_url($image_id_3);
+$image_id_1 = 45;
+$image_id_2 = 44;
+$image_id_3 = 43;
 ?>
 
 <div id="programmeGroupe" class="content_section">
-  <div class="d-flex">
+  <div class="flex-container">
   <div class="card m-2" style="width: 18rem;">
-      <img src="<?php echo $image_url_1; ?>" class="card-img-top" alt="...">
+      <img src="<?php echo $image_id_1; ?>" class="card-img-top" alt="picture card">
       <div class="card-body">
         <h5 class="card-title">Séance d'étirements dynamiques (10 min) : </h5>
         <p class="card-text">Avant une réunion importante, organisez une courte séance d'étirements dynamiques pour relâcher les tensions et augmenter la concentration.</p>
@@ -253,7 +246,7 @@ $image_url_3 = wp_get_attachment_url($image_id_3);
       </div>
     </div>
 <div class="card m-2" style="width: 18rem;">
-<img src="<?php echo $image_url_2; ?>" class="card-img-top" alt="...">
+<img src="<?php echo $image_id_2; ?>" class="card-img-top" alt="picture card">
   <div class="card-body">
     <h5 class="card-title">Marche rapide groupé (15 min) :</h5>
     <p class="card-text"> Maintenez un rythme modéré qui stimule la circulation sanguine, encourage la conversation avec vos collègues.et ajoute une dimension dynamique à votre routine.</p>
@@ -261,7 +254,7 @@ $image_url_3 = wp_get_attachment_url($image_id_3);
       </div>
     </div>
 <div class="card m-2" style="width: 18rem;">
-<img src="<?php echo $image_url_3; ?>" class="card-img-top" alt="...">
+<img src="<?php echo $image_id_3; ?>" class="card-img-top" alt="picture card">
   <div class="card-body">
     <h5 class="card-title">Renforcement musculaire léger (15 min) :</h5>
     <p class="card-text">Utilisez des poids légers ou de bandes élastiques pour travailler les bras, les jambes et le tronc tout en discutant avec vos collègues.</p>
@@ -272,18 +265,15 @@ $image_url_3 = wp_get_attachment_url($image_id_3);
     </div>
 
     <?php
-$image_id_4 = 50;
-$image_url_4 = wp_get_attachment_url($image_id_4);
-$image_id_5 = 48;
-$image_url_5 = wp_get_attachment_url($image_id_5);
-$image_id_6 = 49;
-$image_url_6 = wp_get_attachment_url($image_id_6);
+$image_id_4 = 42;
+$image_id_5 = 40;
+$image_id_6 = 41;
 ?>
 
     <div id="programmePersonnel" class="content_section" style="display: none;">
-    <div class="d-flex">
+    <div class="flex-container">
     <div class="card m-2" style="width: 18rem;">
-  <img src="<?php echo $image_url_4; ?>" class="card-img-top" alt="...">
+  <img src="<?php echo $image_id_4; ?>" class="card-img-top" alt="picture card">
   <div class="card-body">
     <h5 class="card-title">Exercice de récupération (15 min) :</h5>
     <p class="card-text">Marche lente ou jogging très léger, suivi d'étirements supplémentaires et de respirations profondes pour une bonne récupération et relaxation.</p>
@@ -291,7 +281,7 @@ $image_url_6 = wp_get_attachment_url($image_id_6);
   </div>
 </div>
 <div class="card m-2" style="width: 18rem;">
-  <img src="<?php echo $image_url_5; ?>" class="card-img-top" alt="...">
+  <img src="<?php echo $image_id_5; ?>" class="card-img-top" alt="picture card">
   <div class="card-body">
     <h5 class="card-title">Renforcement du tronc (15 min) : </h5>
     <p class="card-text">Fournissez une routine rapide d'exercices de renforcement du tronc, y compris des places latérales, des crunchs et des twists assis.</p>
@@ -299,7 +289,7 @@ $image_url_6 = wp_get_attachment_url($image_id_6);
   </div>
 </div>
 <div class="card m-2" style="width: 18rem;">
-  <img src="<?php echo $image_url_6; ?>" class="card-img-top" alt="...">
+  <img src="<?php echo $image_id_6; ?>" class="card-img-top" alt="picture card">
   <div class="card-body">
     <h5 class="card-title">Entraînement basé sur le poids du corps (15 min) :</h5>
     <p class="card-text">Faites des exercices basés sur le poids du corps tels que des pompes, des squats et des burpees pour une entraînement rapide et efficace.</p>
@@ -351,6 +341,11 @@ function changeTab(tabId) {
     // Activer l'onglet sélectionné
     const activeTab = document.querySelector(`[onclick="changeTab('${tabId}')"]`);
     activeTab.classList.add('active');
+}
+
+function afficherNotification() {
+    // Notification défi
+    alert("Félicitations ! Défi validé avec succès.");
 }
 </script>
 
