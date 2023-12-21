@@ -25,7 +25,7 @@
             <h1 class="heading_profil">Messagerie</h1>
             <div class="primary_profil">
                 <h1>Rejoignez la Communauté</h1>
-                <p>Utilisé notre service de messagerie intégré, conçu pour faciliter les échanges dynamiques entre utilisateurs.</p>
+                <p>Utilisez notre service de messagerie intégré, conçu pour faciliter les échanges dynamiques entre utilisateurs.</p>
                 <button class="btn-messagerie">En maintenance</button>
             </div>
 
@@ -81,7 +81,7 @@
         <ul id="tabList">
             <li class="timeline_profil active" onclick="changeTab('timeline')">
                 <i class="ri-eye-fill ri"></i>
-                <span>Profils</span>
+                <span>Profil</span>
             </li>
 
             <li class="about_profil" onclick="changeTab('defiSemaine')">
@@ -248,7 +248,7 @@ $image_id_3 = 43;
 <img src="<?php echo $image_id_2; ?>" class="card-img-top" alt="picture card">
   <div class="card-body">
     <h5 class="card-title">Marche rapide groupé (15 min) :</h5>
-    <p class="card-text"> Maintenez un rythme modéré qui stimule la circulation sanguine, encourage la conversation avec vos collègues.et ajoute une dimension dynamique à votre routine.</p>
+    <p class="card-text"> Maintenez un rythme modéré qui stimule la circulation sanguine, encourage la conversation avec vos collègues et ajoute une dimension dynamique à votre routine.</p>
     <a href="<?= home_url('/marche-rapide-groupe'); ?>" class="btn btn-card">Commencer</a>
       </div>
     </div>

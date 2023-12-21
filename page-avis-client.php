@@ -35,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <hr>
     <form action="" method="post" class="avis-form">
         <div class="nomprenom-avis">
-            <input type="text" id="nom" name="nom" placeholder="Entrer votre nom" required>
-            <input type="text" id="prenom" name="prenom" placeholder="Entrer votre prénom" required>
+            <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+            <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
         </div>
         <textarea id="avis" name="avis" placeholder="Écrivez votre avis" required></textarea>
 

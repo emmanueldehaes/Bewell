@@ -10,16 +10,16 @@
         <p class="text-contact">Veuillez remplir tout les champs.</p>
         <form action="https://formspree.io/f/xpzvawwo" method="POST">
   <div class="inputBox-contact">
-    <input type="text" name="name" class="name" placeholder="Entrer votre nom" required/>
+    <input type="text" name="name" class="name" placeholder="Entrez votre nom" required/>
   </div>
   <div class="inputBox-contact">
-    <input type="email" name="email" class="email" placeholder="Entrer votre email" required/>
+    <input type="email" name="email" class="email" placeholder="Entrez votre email" required/>
   </div>
   <div class="inputBox-contact">
     <input type="text" name="object" class="objet" placeholder="Objet" required />
   </div>
   <div class="inputBox-contact">
-    <textarea name="text" class="message" placeholder="Entrer votre message..." required></textarea>
+    <textarea name="text" class="message" placeholder="Entrez votre message..." required></textarea>
   </div>
   <button name="submit" class="btn-contact">Envoyer</button>
 </form>

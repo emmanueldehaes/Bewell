@@ -7,6 +7,7 @@ add_theme_support('title-tag');
 // Ajouter un menu dans apprence
 add_theme_support('menus');
 
+add_filter('show_admin_bar', '__return_false');
 
 function scripts_loader()
 {
