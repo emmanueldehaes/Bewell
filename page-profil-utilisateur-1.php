@@ -1,6 +1,20 @@
 <!-- Menu pour profil -->
 
-<?php include 'menu-profils.php'; ?>
+<?php
+
+// Début de session WordPress
+if (!session_id()) {
+    session_start();
+}
+
+// Vérifier si l'utilisateur est connecté
+if (!is_user_logged_in()) {
+    // Rediriger vers la page de connexion
+    wp_redirect(home_url('/connexion'));
+    exit();
+}
+
+include 'menu-profils.php'; ?>
 
  <!-- ===== ===== Body Main-Background ===== ===== -->
  <span class="main_bg_profil"></span>
@@ -45,7 +59,14 @@
     <!-- ===== ===== User Details Sections ===== ===== -->
     <section class="userDetails_profil card_profil">
         <div class="userName_profil">
-            <h1 class="name_profil">Alex Jager</h1>
+            <h1 class="name_profil"><?php
+$user = wp_get_current_user();
+if ( $user->exists() ) { // Vérifie si l'utilisateur est connecté
+    echo esc_html($user->user_login);
+} else {
+    echo 'Utilisateur non connecté.';
+}
+?></h1>
             <div class="map_profil">
                 <i class="ri-map-pin-fill ri"></i>
                 <span>Belgique, Bruxelles</span>

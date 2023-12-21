@@ -122,4 +122,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['nomPrenom'])) {
     }
 </script>
 
-<?php get_footer(); ?>
+<?php wp_footer(); ?>

@@ -6,7 +6,7 @@ $baseImagePath = get_template_directory_uri() . '/assets/img/';
 
 <!-- Section header -->
 
-<header class="section__container header__container" id="home">
+<header class="section__container header__container sr-left" id="home">
   <div class="header__content">
     <h1><span>LA SANTÉ</span> AU BUREAU</h1>
     <p>
@@ -24,11 +24,11 @@ $baseImagePath = get_template_directory_uri() . '/assets/img/';
 
 <section class="section__container explore__container">
   <div class="explore__header">
-    <h2 class="section__header explore__title">PROGRAMMES DISPONIBLES</h2>
+    <h2 class="section__header explore__title sr">PROGRAMMES DISPONIBLES</h2>
     <div class="explore__nav">
     </div>
   </div>
-  <div class="explore__grid">
+  <div class="explore__grid sr">
     <div class="explore__card" id="programme-collectif-1" data-tooltip-content="L'entraînement se compose de plusieurs exercices pour offrir une expérience adaptée à chacun.">
       <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/groupe.png" class="icon_explore" alt="icon"> </span>
       <h4>Programme collectif</h4>
@@ -239,6 +239,18 @@ $baseImagePath = get_template_directory_uri() . '/assets/img/';
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {});
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    ScrollReveal().reveal('.sr', {
+      duration: 1000,
+      delay: 200,
+      distance: '20px',
+      origin: 'bottom',
+      reset: true
+    });
+  });
 </script>
 
 <?php get_footer(); ?>

@@ -1,4 +1,16 @@
 <?php
+// Début de session WordPress
+if (!session_id()) {
+    session_start();
+}
+
+// Vérifier si l'utilisateur est connecté
+if (!is_user_logged_in()) {
+    // Rediriger vers la page de connexion
+    wp_redirect(home_url('/connexion'));
+    exit();
+}
+
 include 'menu-profils.php';
 
 // Supprimez la partie de la connexion à la base de données externe
@@ -21,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($comment_id) {
         // Redirection vers la page de confirmation ou autre
-        $profil_url = home_url('/profil-utilisateur');
+        $profil_url = home_url('/profil-utilisateur-1');
         header("Location: $profil_url");
         exit();
     } else {
@@ -45,17 +57,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var avisForm = document.querySelector('.avis-form');
+   document.addEventListener('DOMContentLoaded', function() {
+    var avisForm = document.querySelector('.avis-form');
 
-        avisForm.addEventListener('submit', function(event) {
-            event.preventDefault();
+    avisForm.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-            alert('Merci pour votre avis !');
+        alert('Merci pour votre avis !');
+
+        // Utilisez setTimeout pour retarder la redirection après l'alerte
+        setTimeout(function() {
             // Soumet ensuite le formulaire manuellement
             avisForm.submit();
-        });
+        }, 500); // le délai en millisecondes 
     });
+});
 </script>
 
 <?php get_footer(); ?>
