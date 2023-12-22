@@ -3,7 +3,9 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    
+    <meta name="description" content="<?php echo $metaDescription; ?>">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="<?php echo $metaKeywords; ?>">
     <?php wp_head(); ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
