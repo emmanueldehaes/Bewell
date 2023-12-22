@@ -6,6 +6,7 @@
             <li class="list-inline-item"><a href="<?= home_url('/inscription'); ?>">INSCRIPTION</a></li>
             <li class="list-inline-item"><a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/mentionslegales.pdf" target="_blank">MENTIONS LÉGALES</a></li>
             <li class="list-inline-item"><a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/politiquedeconfidentialite.pdf" target="_blank">POLITIQUE DE CONFIDENTIALITÉ</a></li>
+            <li class="list-inline-item"><a href="<?php echo get_template_directory_uri(); ?>/assets/pdf/politiqueenmatieredecookies.pdf" target="_blank">COOKIES</a></li>
         </ul>
         <p class="copyright">© TOUS DROIT RÉSERVÉS PAR BEWELL.</p>
     </footer>

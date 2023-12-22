@@ -354,6 +354,7 @@ nav {
 
 /* Ajustements pour les écrans de taille moyenne (tablettes) */
 @media (max-width: 900px) {
+
   /* Réduire les marges intérieures du conteneur principal */
   .section__container {
     padding-left: 20px;
@@ -402,6 +403,7 @@ nav {
 
 /* Ajustements pour les écrans petits (mobiles) */
 @media (max-width: 600px) {
+
   /* Ajustements supplémentaires de la taille du titre principal */
   .header__content h1 {
     font-size: 40px;
@@ -604,26 +606,31 @@ nav {
 
   .explore__grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 20px; /* Espace de 15px entre les cartes */
+    gap: 20px;
+    /* Espace de 15px entre les cartes */
     margin-top: 2rem;
   }
 
   .explore__card {
-    width: 70%; /* Largeur automatique */
-    margin: 0 auto; /* Centrer au milieu */
+    width: 70%;
+    /* Largeur automatique */
+    margin: 0 auto;
+    /* Centrer au milieu */
     transition: none;
   }
 
   .explore__card:hover {
-    transform: none; /* Désactiver l'animation au survol */
+    transform: none;
+    /* Désactiver l'animation au survol */
   }
 
-  .en-savoir-plus-link:focus + .tooltip-container {
+  .en-savoir-plus-link:focus+.tooltip-container {
     display: block;
   }
 
   .tooltip-container {
-    top: 110%; /* Ajustement de la position de la tooltip */
+    top: 110%;
+    /* Ajustement de la position de la tooltip */
   }
 }
 
@@ -855,8 +862,10 @@ nav {
   .join__image {
     margin-top: 2rem;
     display: flex;
-    flex-direction: column-reverse; /* Inverser l'ordre des éléments en colonne */
-    align-items: center; /* Centrer les éléments horizontalement */
+    flex-direction: column-reverse;
+    /* Inverser l'ordre des éléments en colonne */
+    align-items: center;
+    /* Centrer les éléments horizontalement */
   }
 
   .join__grid {
@@ -1022,37 +1031,47 @@ nav {
 /* Ajustements pour les écrans petits (mobiles) */
 @media (max-width: 600px) {
   .price__container {
-    margin-top: 4rem; /* Ajustement de la marge supérieure */
+    margin-top: 4rem;
+    /* Ajustement de la marge supérieure */
     margin-bottom: 2rem;
-    padding-bottom: 2rem; /* Ajustement de la marge inférieure et du rembourrage */
+    padding-bottom: 2rem;
+    /* Ajustement de la marge inférieure et du rembourrage */
   }
 
   .tarifs__title {
-    font-size: 24px; /* Taille de police ajustée */
+    font-size: 24px;
+    /* Taille de police ajustée */
   }
 
   .section__tariftext {
-    font-size: 14px; /* Taille de police ajustée */
+    font-size: 14px;
+    /* Taille de police ajustée */
   }
 
   .price__grid {
-    grid-template-columns: 1fr; /* Une colonne pour les écrans mobiles */
-    gap: 1rem; /* Espacement entre les cartes */
+    grid-template-columns: 1fr;
+    /* Une colonne pour les écrans mobiles */
+    gap: 1rem;
+    /* Espacement entre les cartes */
   }
 
   .price__card {
-    margin: auto; /* Centrage des cartes */
-    max-width: 300px; /* Largeur maximale pour éviter de s'étirer trop */
+    margin: auto;
+    /* Centrage des cartes */
+    max-width: 300px;
+    /* Largeur maximale pour éviter de s'étirer trop */
   }
 
   .price__card h4,
   .price__card h3,
   .price__card p {
-    font-size: 16px; /* Taille de police ajustée */
+    font-size: 16px;
+    /* Taille de police ajustée */
   }
 
   .price__card p i {
-    font-size: 18px; /* Taille de police ajustée */
+    font-size: 18px;
+    /* Taille de police ajustée */
   }
 }
 
@@ -1265,6 +1284,20 @@ form {
 
 .text-contact p {
   margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .explore__title.social-icons-contact {
+    visibility: hidden;
+  }
+}
+
+.container.accordion-container {
+  max-width: 600px;
+  /* Ajustez la largeur maximale selon vos préférences */
+  margin: 0 auto;
+  /* Centre le conteneur horizontalement */
+  margin-bottom: 5rem;
 }
 
 
@@ -1866,27 +1899,36 @@ form {
 /* Ajustements pour les écrans petits (mobiles) */
 @media (max-width: 600px) {
   .footer-basic ul {
-    font-size: 16px; /* Taille de police ajustée */
+    font-size: 16px;
+    /* Taille de police ajustée */
   }
 
   .footer-basic li {
-    padding: 5px 10px; /* Ajustement de l'espacement */
+    padding: 5px 10px;
+    /* Ajustement de l'espacement */
   }
 
   .footer-basic .social {
-    padding-bottom: 15px; /* Ajustement de l'espacement */
+    padding-bottom: 15px;
+    /* Ajustement de l'espacement */
   }
 
-  .footer-basic .social > a {
-    font-size: 20px; /* Taille de police ajustée */
-    width: 30px; /* Largeur ajustée */
-    height: 30px; /* Hauteur ajustée */
-    line-height: 30px; /* Ajustement de la hauteur de ligne */
+  .footer-basic .social>a {
+    font-size: 20px;
+    /* Taille de police ajustée */
+    width: 30px;
+    /* Largeur ajustée */
+    height: 30px;
+    /* Hauteur ajustée */
+    line-height: 30px;
+    /* Ajustement de la hauteur de ligne */
   }
 
   .footer-basic .copyright {
-    margin-top: 15px; /* Ajustement de la marge supérieure */
-    font-size: 12px; /* Taille de police ajustée */
+    margin-top: 15px;
+    /* Ajustement de la marge supérieure */
+    font-size: 12px;
+    /* Taille de police ajustée */
   }
 }
 
@@ -2194,7 +2236,7 @@ textarea {
 
 
 :root {
-  
+
   --f1-color: #fff;
   --f2-color: #000;
   --f3-color: rgba(0, 0, 0, 0.8);
@@ -2256,7 +2298,8 @@ textarea {
     "work_skills timeline_about";
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  ;
   padding: 2rem 7rem;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 0, 0, 0.08);
 }
@@ -2285,7 +2328,7 @@ textarea {
 
 /*  Container Cards Css  */
 .container_profil .card_profil {
-  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.3));
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
   backdrop-filter: blur(3rem);
   border-radius: 0.5rem;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
@@ -2385,9 +2428,9 @@ textarea {
   margin-bottom: 3rem;
 }
 
-.btn-messagerie:hover{
-background-color: var(--couleur-gris);
-color: var(--couleur-blanc);
+.btn-messagerie:hover {
+  background-color: var(--couleur-gris);
+  color: var(--couleur-blanc);
 }
 
 /*  Skills Bars Css */
@@ -2512,11 +2555,11 @@ color: var(--couleur-blanc);
   margin-top: 4px;
 }
 
-.heading_profil{
+.heading_profil {
   font-size: 1.4rem;
 }
 
-.label_profil{
+.label_profil {
   font-size: 1rem;
   width: 40%;
 }
@@ -2529,14 +2572,18 @@ color: var(--couleur-blanc);
   margin-bottom: 1rem;
 }
 
-li.phone_profil{
+li.phone_profil {
   display: flex;
   margin-top: 2rem;
   margin-bottom: 1rem;
-}li.address_profil{
+}
+
+li.address_profil {
   display: flex;
   margin-bottom: 1rem;
-}li.email_profil{
+}
+
+li.email_profil {
   display: flex;
   margin-bottom: 1rem;
 }
@@ -2658,11 +2705,13 @@ li.phone_profil{
 
 .card-text {
   font-size: 0.8rem;
-}.card-title{
+}
+
+.card-title {
   font-size: 1.2rem;
 }
 
-.btn-card{
+.btn-card {
   padding: 0.2rem 1.5rem;
   outline: none;
   border: none;
@@ -2773,19 +2822,22 @@ li.phone_profil{
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .flex-container {
     display: flex;
     flex-direction: column;
   }
+
   .timeline_about_profil .tabs_profil ul {
     display: flex;
     flex-direction: column;
   }
-  .userDetails_profil .userName_profil .map_profil span{
+
+  .userDetails_profil .userName_profil .map_profil span {
     display: none;
   }
-  .userDetails_profil .userName_profil .map_profil{
+
+  .userDetails_profil .userName_profil .map_profil {
     display: none;
   }
 }
@@ -2805,17 +2857,22 @@ li.phone_profil{
   margin-right: 1rem;
 }
 
-.ri-close-line{
+.ri-close-line {
   font-size: 1.4rem;
   color: var(--couleur-blanc);
   outline: none;
 }
 
-.ri-close-line:hover{
+.ri-close-line:hover {
   color: var(--couleur-blanc);
 }
 
 .bg-svg {
   background-color: var(--couleur-brun-fonce);
   padding: 3rem;
+}
+
+.textinfo-exercice {
+  text-align: center;
+  color: var(--couleur-blanc);
 }
